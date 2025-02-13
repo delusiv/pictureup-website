@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>PICTURE UP</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <body>
+    <!-- Background Video Container -->
+    <video
+      id="progress"
+      class="back-video"
+      autoplay
+      loop
+      muted
+      playsinline
+      aria-hidden="true"
+    >
+      <source src="../video/bgvideo3.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <!-- Header Section -->
+    <header>
+      <nav class="menu-overlay">
+        <ul>
+          <li><a href="#" class="o-w-button">Work</a></li>
+          <li><a href="#" class="o-a-button">About</a></li>
+          <li><a href="#" class="o-c-button">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="inline">
+        <a class="logo" href="#">PICTURE UP</a>
+
+        <!-- Navigation -->
+        <nav>
+          <!-- Hamburger Button (visible on smaller screens) -->
+          <button class="hamburger" aria-label="Toggle menu">
+            <!-- Hamburger Icon -->
+            <svg class="icon-hamburger" width="24" height="24" fill="white" viewBox="0 0 24 24">
+              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg>
+          
+            <!-- X Icon -->
+            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+              <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </svg>
+          </button>
+          <ul class="header__menu">
+            <li><a href="#" class="w-button">Work</a></li>
+            <li><a href="#" class="a-button">About</a></li>
+            <li><a href="#" class="c-button">Contact</a></li>
+          </ul>
+
+        </nav>
+      </div>
+    </header>
+
+    <!-- Empty spacer (if needed) -->
+    <div class="empty"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Landing / Front Page -->
+      <section class="frontpage whiteclear">
+        <button class="landing-arrowdown" aria-label="Scroll down">
+          <svg
+            class="l-arrowdown-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            width="24"
+            fill="white"
+            viewBox="0 -960 960 960"
+          >
+            <path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/>
+          </svg>
+        </button>
+        <div class="center">Click me.</div>
+      </section>
+
+      <!-- Portfolio Carousel -->
+      <section class="portfolio">
+        <ul class="carousel">
+          <!-- Item 1 -->
+          <li>
+            <button class="box1">
+              <video class="box1video" muted playsinline>
+                <source src="../video/s-nike.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="textforbutton1">
+                <h2 class="anim">Weedmaps: This Fall</h2>
+                <div class="inline2">
+                  <h6 class="vwork anim">View Work&nbsp;</h6>
+                  <svg
+                    class="tinyarrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    width="1em"
+                    fill="black"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <!-- Item 2 -->
+          <li>
+            <button class="box2">
+              <video class="box2video" muted playsinline>
+                <source src="../video/s-delta.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="textforbutton2">
+                <h2 class="anim">Mechanic</h2>
+                <div class="inline2">
+                  <h6 class="vwork anim">View Work&nbsp;</h6>
+                  <svg
+                    class="tinyarrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    width="1em"
+                    fill="black"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </li>
+
+          <!-- Item 3 -->
+          <li>
+            <button class="box3">
+              <video class="box3video" muted playsinline>
+                <source src="../video/hq-gucci.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="textforbutton3">
+                <h2 class="anim">Weedmaps: This Fall</h2>
+                <div class="inline2">
+                  <h6 class="vwork anim">View Work&nbsp;</h6>
+                  <svg
+                    class="tinyarrow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="1em"
+                    width="1em"
+                    fill="black"
+                    viewBox="0 -960 960 960"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </section>
+
+      <!-- About Section -->
+      <section class="about-section darkmode2">
+        <p class="anim about-size">
+Founded in Arizona by a collective of creative minds from across the US, PICTURE UP is dedicated to creating a lasting impact through high-end video advertising. Our mission is to transform brand stories into cinematic experiences that captivate, inspire, and drive meaningful engagement. We empower brands stand out in today's crowded digital landscape.
+        </p>
+        <!-- <div class="empty-about"></div> -->
+      </section>
+    </main>
+
+    <section class="contact-section lightmode">
+      <h6 class="ctitle anim">Contact Us</h6>
+      <a class="email anim lightmode" href="mailto:contact@picture-up.co">contact@picture-up.co</a>
+    </section>
+
+    <!-- Additional Spacer if Needed
+  <div class="emptyfooter darkmode"></div> -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="ftext lightmode">
+        © PICTURE UP, LLC 2025<br>
+        ALL RIGHTS RESERVED
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,435 @@
+/************************************************
+ * 1. RESET & IMPORTS
+ ************************************************/
+ @import '../styles/modern-normalize.css';
+ @import '../styles/utils.css';
+ 
+ /************************************************
+  * 2. ROOT VARIABLES
+  ************************************************/
+ :root {
+   /* Colors */
+   --clr-white: #f7f5f3;
+   --clr-light: #d4d2d0;
+   --clr-slate400: #73716f;
+   --clr-slate600: #3c4954;
+   --clr-slate800: #002942;
+   --clr-dark: #001a2d;
+   --clr-clear: rgba(0, 0, 0, 0);
+ 
+   /* Font Sizes */
+   --size-xxs: 0.5rem;
+   --size-xs: 0.75rem;
+   --size-sm: 0.875rem;
+   --size-base: 1rem;    /* ~16px */
+   --size-lg: 1.125rem;  /* ~18px */
+   --size-xl: 1.25rem;   /* ~20px */
+   --size-2xl: 1.5rem;   /* ~24px */
+   --size-3xl: 1.875rem; /* ~30px */
+   --size-4xl: 2.25rem;  /* ~36px */
+   --size-5xl: 3rem;     /* ~48px */
+   --size-6xl: 3.75rem;  /* ~60px */
+   --size-7xl: 4.5rem;   /* ~72px */
+   --size-8xl: 6rem;     /* ~96px */
+   --size-9xl: 8rem;     /* ~128px */
+   --size-10xl: 10rem;   /* ~160px */
+ }
+ 
+ /************************************************
+  * 3. GLOBAL DEFAULTS
+  ************************************************/
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+ 
+ html {
+   scroll-behavior: smooth;
+   /* Optional: If you use scroll-timeline, ensure you have the polyfill or wide support. */
+   /* scroll-timeline: --page-scroll block; */
+ }
+ 
+ body {
+   width: 100%;
+   height: 100%;
+ }
+ 
+ /************************************************
+  * 4. MEDIA (IMG, VIDEO, ETC.)
+  ************************************************/
+ /* If you want a universal rule for images, videos, etc. */
+ img,
+ picture,
+ video,
+ canvas,
+ svg {
+   display: block;
+   max-width: 100%;
+ }
+ 
+ /************************************************
+  * 5. BUTTONS & INTERACTIVE ELEMENTS
+  ************************************************/
+ button {
+   display: inline-block;
+   padding: 0;
+   border: none;
+   cursor: pointer;
+   color: inherit; 
+   background: transparent; /* optional if you want no bg */
+ }
+ 
+ /************************************************
+  * 6. HEADINGS & TEXT
+  ************************************************/
+ h1 {
+   font-size: var(--size-8xl);
+ }
+ h2 {
+   font-size: var(--size-4xl);
+   line-height: 1;
+   font-weight: 200;
+   margin-bottom: .2em;
+   margin-top: .2em;
+ }
+ h3 {
+   font-size: var(--size-2xl);
+ }
+ h4 {
+   font-size: var(--size-xl);
+ }
+ h5 {
+   font-size: var(--size-lg);
+ }
+ h6 {
+   font-size: var(--size-base);
+   font-weight: 400;
+
+ }
+ 
+ p {
+   font-size: var(--size-lg);
+   line-height: 1.5;
+ }
+ 
+ /* Common heading/text defaults */
+ h1,
+  h3,
+ h4,
+ h5,
+ p {
+   margin-top: 0;
+   margin-bottom: 0;
+   line-height: 1.2;
+   font-weight: 200;
+ }
+
+ /************************************************
+  * 7. LINKS
+  ************************************************/
+ a {
+   text-decoration: none;
+   color: var(--clr-white);
+ }
+ a:hover {
+   /* text-decoration: underline; etc. */
+ }
+ 
+ /************************************************
+  * 8. LISTS
+  ************************************************/
+ ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ /************************************************
+  * 9. SCROLLBAR (Optional)
+  ************************************************/
+ ::-webkit-scrollbar {
+   width: 2px;
+ }
+ ::-webkit-scrollbar-track {
+   background: rgba(0, 0, 0, 0.8);
+ }
+ ::-webkit-scrollbar-thumb {
+   background: var(--clr-white);
+ }
+ ::-webkit-scrollbar-thumb:hover {
+   background: var(--clr-white);
+ }
+
+
+
+ header {
+   background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0));
+   font-size: var(--size-lg);
+   color: var(--clr-white);
+   
+ }
+ 
+ /* Example: a menu fade effect */
+ .header__menu:has(li:hover) li:not(:hover) {
+   opacity: 0.3;
+   transition: opacity 0.3s;
+ }
+ 
+ .inline {
+   display: flex;
+   justify-content: space-between;
+   padding: 2em 2.5em;
+ }
+ .logo {
+   font-size: var(--size-2xl);
+ }
+ .collapse {
+   list-style: none;
+ }
+ 
+ .hamburger {
+    background: none;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    /* Position or styling as needed */
+  }
+  .hamburger.fixed-position {
+    position: fixed;
+  }
+  
+  /* Default: Show hamburger, hide X */
+  .icon-hamburger {
+    display: inline-block;
+
+  }
+  .icon-close {
+    display: none;
+  }
+  
+  /* When .open is toggled, hide hamburger, show X */
+  .hamburger.open .icon-hamburger {
+    display: none;
+
+  }
+  .hamburger.open .icon-close {
+    display: inline-block;
+    transform: translateX(-1.4em);
+  }
+  
+ 
+ /************************************************
+  * 12. MAIN
+
+ 
+ /* .frontpage etc. if relevant to your layout */
+ .frontpage {
+   padding: 2em;
+   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
+   display: flex;
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+
+ }
+ 
+ /************************************************
+  * 13. PORTFOLIO & CAROUSEL
+  ************************************************/
+ .portfolio {
+   padding: 0;
+ }
+ 
+ .carousel {
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0;
+   padding: 0;
+   background-color: var(--clr-white);
+ }
+ 
+ /* 
+   By default (mobile-first), each LI is 100%. 
+   Use media queries to alter widths for desktop.
+ */
+ .carousel li {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ /* Example box classes */
+ .box1,
+ .box2,
+ .box3 {
+   padding: 2em ;
+   background-color: var(--clr-white);
+   text-align: left;
+   transition: opacity 0.3s;
+ }
+ 
+ .box1video,
+ .box2video,
+ .box3video {
+   display: block;
+   width: 100%;
+   height: auto;
+ }
+ 
+ /* Hover effect with arrow shift */
+ .box1:hover,
+ .box2:hover,
+ .box3:hover {
+   opacity: 0.8;
+ }
+ .box1:hover .tinyarrow,
+ .box2:hover .tinyarrow,
+ .box3:hover .tinyarrow {
+   transform: translateX(0.4em) translateY(.2em);
+   transition: transform 0.3s;
+ }
+ 
+.tinyarrow {
+  transform: translateX(.2em) translateY(.2em);
+}
+
+.inline2 {
+  display: flex;
+  padding-left: .15em  ;
+}
+
+ /************************************************
+  * 14. ABOUT / CONTACT
+  ************************************************/
+ .about-section {
+   font-weight: 200;
+   line-height: 1.5;
+   padding-top: 4em;
+   padding-bottom: 4em;
+ }
+ 
+ .contact-section {
+   padding: 4em;
+   line-height: 1.5;
+   text-align: center;
+ }
+ .email {
+   font-size: var(--size-2xl);
+ }
+ 
+header {
+  z-index: 90;
+}
+main {
+  z-index: 80;
+}
+
+ /************************************************
+  * 15. FOOTER
+  ************************************************/
+ footer {
+   padding: 0;
+ }
+ 
+ 
+/* 3. The Fixed Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  transform: translateX(100%); /* Push off-screen initially (to the right) */
+  transition: transform 1s cubic-bezier(0, 1, 0, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 4. Show Overlay When .open Class is Present */
+.menu-overlay.open {
+  transform: translateX(0);
+}
+
+/* 5. Overlay Menu Items */
+.menu-overlay ul {
+  list-style: none;
+  text-align: center;
+}
+.menu-overlay li {
+  margin: 1rem 0;
+}
+ /* Example: a menu fade effect */
+ .menu-overlay:has(li:hover) li:not(:hover) {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+
+.menu-overlay a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+ .ftext {
+   text-align: center;
+   padding: 4em;
+   font-size: 0.5rem;
+ }
+ 
+ /************************************************
+  * 16. ANIMATED TEXT (Invisible Words)
+  ************************************************/
+ .anim span {
+   opacity: 0;
+   transform: translateY(0.5em);
+   display: inline-block;
+ }
+ .anim span.visible {
+   opacity: 1;
+   transform: translateY(0);
+   transition: transform 0.3s cubic-bezier(0, 1, 0, 1), 
+               opacity 0.3s cubic-bezier(0, 1, 0, 1);
+ }
+ 
+ /************************************************
+  * 17. .landing-arrowdown
+  ************************************************/
+ .landing-arrowdown {
+   background-color: var(--clr-clear);
+   scroll-margin-top: 2em;
+   transition: opacity 1s cubic-bezier(0, 1, 0, 1);
+   scale: 2;
+   margin: 1em;
+ }
+ .landing-arrowdown:hover {
+   opacity: 0.3;
+ }
+
+ 
+ /************************************************
+  * 18. MEDIA QUERIES (EXAMPLE)
+  ************************************************/
+ 
+ @media (min-width: 768px) {
+   .carousel li:nth-child(1),
+   .carousel li:nth-child(2) {
+     width: 50%;
+   }
+   .carousel li:nth-child(3) {
+     width: 100%;
+   }
+
+ }
+
+ 
+
+ .center {
+  text-align: center;
+ }
+
+ .center:hover {
+  color: var(--clr-slate400)
+ }

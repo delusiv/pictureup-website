@@ -1,0 +1,218 @@
+/* =========================================
+   CSS Variables (example; adjust as needed)
+   ========================================= */
+   :root {
+    --clr-white: #ffffff;
+    --clr-dark: #000000;
+    --clr-slate600: #2b2b2b;
+    --clr-clear: transparent;
+    
+    /* Font size variables */
+    --size-2xl: 1.5rem;
+    --size-4xl: 2rem;
+    
+    /* Transition durations, etc. */
+    --transition-speed: 0.3s;
+  }
+  
+  /* =========================================
+     COLOR SCHEME CLASSES
+     ========================================= */
+  .lightmode {
+    background-color: var(--clr-white);
+    color: var(--clr-dark);
+  }
+  
+  .darkmode {
+    background-color: var(--clr-slate600);
+    color: var(--clr-white);
+  }
+  
+  .darkmode2 {
+    background-color: var(--clr-dark);
+    color: var(--clr-white);
+  }
+  
+  .whiteclear {
+    background-color: var(--clr-clear);
+    color: var(--clr-white);
+  }
+  
+  /* =========================================
+     EMPTY / SPACER CLASSES
+     ========================================= */
+  /* All of these elements should ignore pointer events */
+  .plus-section,
+  .empty,
+  .empty-about,
+  .empty2,
+  .emptyfooter {
+    pointer-events: none;
+  }
+  
+  .plus-section {
+    margin-top: 0;
+  }
+  
+  .empty {
+    height: 70vh;
+  }
+  
+  .empty-about {
+    height: 60vh;
+  }
+  
+  .empty2 {
+    height: 400px;
+  }
+  
+  .emptyfooter {
+
+    height: 100vh;
+  }
+  
+  /* =========================================
+     BACKGROUND VIDEO
+     ========================================= */
+  .back-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    pointer-events: none;
+    z-index: -10;
+    scale: 1.004;
+  }
+  
+  /* Aspect-ratio handling for the video */
+  @media (min-aspect-ratio: 16/9) {
+    .back-video {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-aspect-ratio: 16/9) {
+    .back-video {
+      width: auto;
+      height: 100%;
+    }
+  }
+  
+  /* =========================================
+     HEADER / NAV / BODY
+     ========================================= */
+  /* Base styles for .about-section and .about-size */
+  .about-section {
+    transition: all 1s;
+    /* Default padding can go here if desired,
+       then media queries override if needed */
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  
+  .about-size {
+    font-size: var(--size-xl);
+    line-height: 1.5em;
+  }
+  
+  /* Hamburger base styles */
+  .hamburger {
+    transform: translateY(0.1em);
+    opacity: 1;
+    background-color: var(--clr-clear);
+    transition: opacity var(--transition-speed) ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hamburger:hover {
+    opacity: 0.7; /* or whatever hover effect you prefer */
+  }
+  
+  /* Arrow rotation */
+  .landing-arrowdown svg {
+    transition: transform var(--transition-speed) ease;
+  }
+  
+  .landing-arrowdown.rotated svg {
+    transform: rotate(180deg);
+  }
+  
+  /* =========================================
+     MEDIA QUERIES (ASPECT-RATIO BASED)
+     ========================================= */
+  
+  /* 
+    Smaller than 4:3 — 
+    Show hamburger, hide standard menu, 
+    adjust about-section font/padding as needed.
+  */
+  @media (max-aspect-ratio: 4/3) {
+    .hamburger {
+      display: flex;
+    }
+    .header__menu {
+      display: none;
+    }
+  
+    /* Example overrides (already set as default above; 
+       only needed if you want different styles than the base) */
+    .about-section {
+      padding-left: 2em;
+      padding-right: 2em;
+
+    }
+    .about-size {
+      font-size: var(--size-lg);
+    }
+  }
+  
+  /* 
+    Larger than 4:3 — 
+    Hide hamburger, show standard menu,
+    different padding for .about-section, etc.
+  */
+  @media (min-aspect-ratio: 4/3) {
+    .hamburger {
+      display: none;
+    }
+  
+    .header__menu {
+      display: flex;
+      align-items: center;
+      gap: var(--size-4xl);
+      list-style: none;
+      transition: var(--transition-speed);
+      width: min-content;
+      transform: translateY(0.2em);
+    }
+  
+    /* Carousel layout changes */
+    .carousel li:nth-child(1),
+    .carousel li:nth-child(2) {
+      width: 50%;
+    }
+    .carousel li:nth-child(3) {
+      width: 100vw;
+    }
+  
+    .about-section {
+      padding-left: 16em;
+      padding-right: 16em;
+    }
+    .about-size {
+      font-size: var(--size-4xl);
+    }
+  }
+  
+
+  .no-scroll-y {
+    overflow-y: hidden; /* Disables vertical scrolling */
+  }

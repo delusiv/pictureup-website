@@ -213,7 +213,6 @@
   }
   .hamburger.open .icon-close {
     display: inline-block;
-    transform: translateX(-1.4em);
   }
   
  
@@ -257,9 +256,14 @@
  
  /* Example box classes */
  .box1,
- .box2,
- .box3 {
+ .box2 {
    padding: 2em ;
+   background-color: var(--clr-white);
+   text-align: left;
+   transition: opacity 0.3s;
+ }
+ .box3 {
+   padding: 0em ;
    background-color: var(--clr-white);
    text-align: left;
    transition: opacity 0.3s;

@@ -175,10 +175,12 @@
  .inline {
    display: flex;
    justify-content: space-between;
-   padding: 2em 2.5em;
+   align-items: center; 
+   padding: 1em;
  }
  .logo {
    font-size: var(--size-2xl);
+   cursor: pointer;
  }
  .collapse {
    list-style: none;
@@ -211,7 +213,6 @@
   }
   .hamburger.open .icon-close {
     display: inline-block;
-    transform: translateX(-1.4em);
   }
   
  
@@ -221,11 +222,10 @@
  
  /* .frontpage etc. if relevant to your layout */
  .frontpage {
-   padding: 2em;
-   background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.2));
+   padding: 1em;
    display: flex;
-  flex-direction: column;
-  align-items: center; /* centers horizontally */
+   flex-direction: column;
+   align-items: center; /* centers horizontally */
 
  }
  
@@ -256,13 +256,23 @@
  
  /* Example box classes */
  .box1,
- .box2,
- .box3 {
+ .box2 {
    padding: 2em ;
    background-color: var(--clr-white);
    text-align: left;
    transition: opacity 0.3s;
  }
+ .box3 {
+   padding: 0em ;
+   background-color: var(--clr-white);
+   text-align: left;
+   transition: opacity 0.3s;
+ }
+
+.textforbutton3 {
+  padding-left: 2em;
+  margin-bottom: 2em;
+}
  
  .box1video,
  .box2video,

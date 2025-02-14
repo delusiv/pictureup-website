@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Picture Up | A network of passionate filmmakers.</title>
+    <title>A network of passionate filmmakers.</title>
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
       <body>
     <!-- Background Video Container -->
     <video
@@ -32,31 +33,31 @@
           <li><a href="#" class="o-c-button">Contact</a></li>
         </ul>
       </nav>
-      <div class="inline">
-        <div class="logo"><object data="svg/logo3.svg" width="100" height="100"> </object></div>
 
         <!-- Navigation -->
         <nav>
-          <!-- Hamburger Button (visible on smaller screens) -->
-          <button class="hamburger" aria-label="Toggle menu">
-            <!-- Hamburger Icon -->
-            <svg class="icon-hamburger" width="24" height="24" fill="white" viewBox="0 0 24 24">
-              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+  <div class="inline">
+    <div class="logo">
+      <object data="svg/logo6.svg" width="60" height="60"></object>
+    </div>
+    <button class="hamburger" aria-label="Toggle menu">
+      <svg class="icon-hamburger" width="40" height="40" fill="white" viewBox="0 0 100 100">
+                  <rect width="100" height="10"></rect>
+                  <rect y="30" width="100" height="10"></rect>
+                  <rect y="60" width="100" height="10"></rect>
             </svg>
-          
             <!-- X Icon -->
-            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white">
+            <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" height="100" viewBox="0 -960 960 960" width="100" fill="white">
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
             </svg>
-          </button>
-          <ul class="header__menu">
-            <li><a href="#" class="w-button">Work</a></li>
-            <li><a href="#" class="a-button">About</a></li>
-            <li><a href="#" class="c-button">Contact</a></li>
-          </ul>
-
-        </nav>
-      </div>
+    </button>
+    <ul class="header__menu">
+      <li><a href="#" class="w-button">Work</a></li>
+      <li><a href="#" class="a-button">About</a></li>
+      <li><a href="#" class="c-button">Contact</a></li>
+    </ul>
+  </div>
+</nav>
     </header>
 
     <!-- Empty spacer (if needed) -->
@@ -196,6 +197,6 @@ Founded in Arizona by a collective of creative minds from across the US, PICTURE
     </footer>
 
     <!-- Scripts -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>

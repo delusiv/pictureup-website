@@ -176,6 +176,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center; 
+   padding-left: 1em;
+   padding-right:1em;
  }
  .logo {
    font-size: var(--size-2xl);

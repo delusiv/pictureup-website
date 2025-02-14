@@ -1,0 +1,6 @@
+title: Picture Up
+description: The website.
+url: "https://www.picture-up.co" # your custom domain
+baseurl: "" # leave empty since it's hosted at the domain root
+
+# Other settings...

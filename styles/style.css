@@ -132,9 +132,6 @@
    text-decoration: none;
    color: var(--clr-white);
  }
- a:hover {
-   /* text-decoration: underline; etc. */
- }
  
  /************************************************
   * 8. LISTS

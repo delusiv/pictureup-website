@@ -179,6 +179,7 @@
  }
  .logo {
    font-size: var(--size-2xl);
+   cursor: pointer;
  }
  .collapse {
    list-style: none;

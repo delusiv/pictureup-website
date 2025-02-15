@@ -18,21 +18,21 @@
    --clr-clear: rgba(0, 0, 0, 0);
  
    /* Font Sizes */
-   --size-xxs: 0.5rem;
-   --size-xs: 0.75rem;
-   --size-sm: 0.875rem;
-   --size-base: 1rem;    /* ~16px */
-   --size-lg: 1.125rem;  /* ~18px */
-   --size-xl: 1.25rem;   /* ~20px */
-   --size-2xl: 1.5rem;   /* ~24px */
-   --size-3xl: 1.875rem; /* ~30px */
-   --size-4xl: 2.25rem;  /* ~36px */
-   --size-5xl: 3rem;     /* ~48px */
-   --size-6xl: 3.75rem;  /* ~60px */
-   --size-7xl: 4.5rem;   /* ~72px */
-   --size-8xl: 6rem;     /* ~96px */
-   --size-9xl: 8rem;     /* ~128px */
-   --size-10xl: 10rem;   /* ~160px */
+   --size-xxs: 0.5rrem;
+   --size-xs: 0.75rrem;
+   --size-sm: 0.875rrem;
+   --size-base: 1rrem;    /* ~16px */
+   --size-lg: 1.125rrem;  /* ~18px */
+   --size-xl: 1.25rrem;   /* ~20px */
+   --size-2xl: 1.5rrem;   /* ~24px */
+   --size-3xl: 1.875rrem; /* ~30px */
+   --size-4xl: 2.25rrem;  /* ~36px */
+   --size-5xl: 3rrem;     /* ~48px */
+   --size-6xl: 3.75rrem;  /* ~60px */
+   --size-7xl: 4.5rrem;   /* ~72px */
+   --size-8xl: 6rrem;     /* ~96px */
+   --size-9xl: 8rrem;     /* ~128px */
+   --size-10xl: 10rrem;   /* ~160px */
  }
  
  /************************************************
@@ -42,12 +42,11 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   transition: all .3s;
  }
  
  html {
    scroll-behavior: smooth;
-   /* Optional: If you use scroll-timeline, ensure you have the polyfill or wide support. */
-   /* scroll-timeline: --page-scroll block; */
  }
  
  body {
@@ -88,10 +87,6 @@
  }
  h2 {
    font-size: var(--size-4xl);
-   line-height: 1;
-   font-weight: 200;
-   margin-bottom: .2em;
-   margin-top: .2em;
  }
  h3 {
    font-size: var(--size-2xl);
@@ -104,25 +99,30 @@
  }
  h6 {
    font-size: var(--size-base);
-   font-weight: 400;
-
  }
  
  p {
-   font-size: var(--size-lg);
+   font-size: var(--size-sm);
    line-height: 1.5;
  }
  
- /* Common heading/text defaults */
- h1,
-  h3,
- h4,
- h5,
- p {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+{
+  line-height: 1;
+  font-weight: 100;
+}
+
+p {
    margin-top: 0;
    margin-bottom: 0;
    line-height: 1.2;
-   font-weight: 200;
+   font-weight: 100;
  }
 
  /************************************************
@@ -165,8 +165,7 @@
    color: var(--clr-white);
    
  }
- 
- /* Example: a menu fade effect */
+
  .header__menu:has(li:hover) li:not(:hover) {
    opacity: 0.3;
    transition: opacity 0.3s;
@@ -176,7 +175,8 @@
    display: flex;
    justify-content: space-between;
    align-items: center; 
-   padding: 1em;
+   padding: 1rem;
+   padding-top: 0.5rem;
  }
  .logo {
    font-size: var(--size-2xl);
@@ -194,7 +194,7 @@
     /* Position or styling as needed */
   }
   .hamburger.fixed-position {
-    position: fixed;
+    position: inline-block;
   }
   
   /* Default: Show hamburger, hide X */
@@ -222,7 +222,7 @@
  
  /* .frontpage etc. if relevant to your layout */
  .frontpage {
-   padding: 1em;
+   padding: 1rem;
    display: flex;
    flex-direction: column;
    align-items: center; /* centers horizontally */
@@ -239,8 +239,8 @@
  .carousel {
    display: flex;
    flex-wrap: wrap;
-   margin: 0;
-   padding: 0;
+   margin-top: 0;
+   padding-top: 2rem;
    background-color: var(--clr-white);
  }
  
@@ -256,12 +256,7 @@
  
  /* Example box classes */
  .box1,
- .box2 {
-   padding: 2em ;
-   background-color: var(--clr-white);
-   text-align: left;
-   transition: opacity 0.3s;
- }
+ .box2,
  .box3 {
    padding: 0em ;
    background-color: var(--clr-white);
@@ -269,9 +264,13 @@
    transition: opacity 0.3s;
  }
 
-.textforbutton3 {
-  padding-left: 2em;
-  margin-bottom: 2em;
+ .textforbutton1,
+ .textforbutton2,
+ .textforbutton3 {
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  font-weight:normal;
 }
  
  .box1video,
@@ -291,12 +290,12 @@
  .box1:hover .tinyarrow,
  .box2:hover .tinyarrow,
  .box3:hover .tinyarrow {
-   transform: translateX(0.4em) translateY(.2em);
+   transform: translateX(0.4em) translateY(0em);
    transition: transform 0.3s;
  }
  
 .tinyarrow {
-  transform: translateX(.2em) translateY(.2em);
+  transform: translateX(.2em) translateY(0em);
 }
 
 .inline2 {
@@ -310,12 +309,12 @@
  .about-section {
    font-weight: 200;
    line-height: 1.5;
-   padding-top: 4em;
-   padding-bottom: 4em;
+   padding-top: 4rem;
+   padding-bottom: 4rem;
  }
  
  .contact-section {
-   padding: 4em;
+   padding: 4rem;
    line-height: 1.5;
    text-align: center;
  }
@@ -381,7 +380,7 @@ main {
 
  .ftext {
    text-align: center;
-   padding: 4em;
+   padding: 4rem;
    font-size: 0.5rem;
  }
  
@@ -397,22 +396,37 @@ main {
    opacity: 1;
    transform: translateY(0);
    transition: transform 0.3s cubic-bezier(0, 1, 0, 1), 
-               opacity 0.3s cubic-bezier(0, 1, 0, 1);
+               opacity 1s cubic-bezier(0, 1, 0, 1);
+ }
+
+ span {
+  font-weight: inherit;
  }
  
  /************************************************
   * 17. .landing-arrowdown
   ************************************************/
- .landing-arrowdown {
-   background-color: var(--clr-clear);
-   scroll-margin-top: 2em;
-   transition: opacity 1s cubic-bezier(0, 1, 0, 1);
-   scale: 2;
-   margin: 1em;
- }
- .landing-arrowdown:hover {
-   opacity: 0.3;
- }
+/* Landing Arrow Button */
+.landing-arrowdown {
+  background-color: var(--clr-clear);
+  scroll-margin-top: 2rem;
+  transition: opacity 1s cubic-bezier(0, 1, 0, 1);
+  scale: 2;
+  margin: 1rem;
+}
+
+.landing-arrowdown:hover {
+  opacity: 0.3;
+}
+
+/* When the landing arrow button is disabled, 
+   it remains visible but with reduced opacity and disabled pointer events */
+.landing-arrowdown:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 
  
  /************************************************
@@ -431,11 +445,3 @@ main {
  }
 
  
-
- .center {
-  text-align: center;
- }
-
- .center:hover {
-  color: var(--clr-slate400)
- }

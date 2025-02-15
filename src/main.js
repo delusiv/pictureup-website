@@ -111,8 +111,6 @@ function initLandingArrow(arrowSelector, videoSelector, headerSelector) {
   });
 }
 
-
-
 /*****************************************************
  * 5. HOVER/TOUCH VIDEO LOGIC FOR PORTFOLIO BOXES
  *****************************************************/
@@ -180,11 +178,11 @@ hamburgerBtn.addEventListener('click', () => {
   hamburgerBtn.classList.toggle('open');
   document.body.classList.toggle('no-scroll-y');
 
-  // Hide or show the arrow based on whether the menu is open
+  // Instead of hiding the landing arrow, disable or enable it
   if (menuOverlay.classList.contains('open')) {
-    landingArrow.style.display = 'none';
+    landingArrow.disabled = true;
   } else {
-    landingArrow.style.display = 'block';
+    landingArrow.disabled = false;
   }
 
   // Now handle the "fixed position" toggle
@@ -207,8 +205,8 @@ menuLinks.forEach(link => {
     hamburgerBtn.classList.remove('open');
     document.body.classList.remove('no-scroll-y');
 
-    // Restore the arrow when the menu is closed
-    landingArrow.style.display = 'block';
+    // Re-enable the landing arrow when the menu is closed
+    landingArrow.disabled = false;
 
     // Optionally remove the fixed-position
     hamburgerBtn.classList.remove('fixed-position');
@@ -243,10 +241,9 @@ setupScrollButton('.a-button, .o-a-button', '.about-section', '.back-video');
 setupScrollButton('.c-button, .o-c-button', '.contact-section', '.back-video');
 
 
-  /*****************************************************
+/*****************************************************
  *  HIDE/SHOW BACKGROUND VIDEO BASED ON .PORTFOLIO
  *****************************************************/
-
 function hideBackVideoWhenPortfolioVisible(portfolioSelector, videoSelector) {
   const portfolioEl = document.querySelector(portfolioSelector);
   const backVideoEl = document.querySelector(videoSelector);

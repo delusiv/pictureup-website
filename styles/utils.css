@@ -106,7 +106,6 @@
   
   /* Hamburger base styles */
   .hamburger {
-    transform: translateY(0.1em);
     opacity: 1;
     background-color: var(--clr-clear);
     transition: opacity var(--transition-speed) ease;
@@ -153,7 +152,7 @@
 
     }
     .about-size {
-      font-size: var(--size-lg);
+      font-size: var(--size-sm);
     }
   }
   

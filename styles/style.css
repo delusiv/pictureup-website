@@ -1,447 +1,727 @@
-/************************************************
- * 1. RESET & IMPORTS
- ************************************************/
- @import '../styles/modern-normalize.css';
- @import '../styles/utils.css';
- 
- /************************************************
-  * 2. ROOT VARIABLES
-  ************************************************/
- :root {
-   /* Colors */
-   --clr-white: #f7f5f3;
-   --clr-light: #d4d2d0;
-   --clr-slate400: #73716f;
-   --clr-slate600: #3c4954;
-   --clr-slate800: #002942;
-   --clr-dark: #001a2d;
-   --clr-clear: rgba(0, 0, 0, 0);
- 
-   /* Font Sizes */
-   --size-xxs: 0.5rrem;
-   --size-xs: 0.75rrem;
-   --size-sm: 0.875rrem;
-   --size-base: 1rrem;    /* ~16px */
-   --size-lg: 1.125rrem;  /* ~18px */
-   --size-xl: 1.25rrem;   /* ~20px */
-   --size-2xl: 1.5rrem;   /* ~24px */
-   --size-3xl: 1.875rrem; /* ~30px */
-   --size-4xl: 2.25rrem;  /* ~36px */
-   --size-5xl: 3rrem;     /* ~48px */
-   --size-6xl: 3.75rrem;  /* ~60px */
-   --size-7xl: 4.5rrem;   /* ~72px */
-   --size-8xl: 6rrem;     /* ~96px */
-   --size-9xl: 8rrem;     /* ~128px */
-   --size-10xl: 10rrem;   /* ~160px */
- }
- 
- /************************************************
-  * 3. GLOBAL DEFAULTS
-  ************************************************/
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   transition: all .3s;
- }
- 
- html {
-   scroll-behavior: smooth;
- }
- 
- body {
-   width: 100%;
-   height: 100%;
- }
- 
- /************************************************
-  * 4. MEDIA (IMG, VIDEO, ETC.)
-  ************************************************/
- /* If you want a universal rule for images, videos, etc. */
- img,
- picture,
- video,
- canvas,
- svg {
-   display: block;
-   max-width: 100%;
- }
- 
- /************************************************
-  * 5. BUTTONS & INTERACTIVE ELEMENTS
-  ************************************************/
- button {
-   display: inline-block;
-   padding: 0;
-   border: none;
-   cursor: pointer;
-   color: inherit; 
-   background: transparent; /* optional if you want no bg */
- }
- 
- /************************************************
-  * 6. HEADINGS & TEXT
-  ************************************************/
- h1 {
-   font-size: var(--size-8xl);
- }
- h2 {
-   font-size: var(--size-4xl);
- }
- h3 {
-   font-size: var(--size-2xl);
- }
- h4 {
-   font-size: var(--size-xl);
- }
- h5 {
-   font-size: var(--size-lg);
- }
- h6 {
-   font-size: var(--size-base);
- }
- 
- p {
-   font-size: var(--size-sm);
-   line-height: 1.5;
- }
- 
+/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-{
-  line-height: 1;
-  font-weight: 100;
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+*,
+::before,
+::after {
+	box-sizing: border-box;
 }
+
+/**
+1. Improve consistency of default fonts in all browsers.
+2. Correct the line height in all browsers.
+3. Prevent adjustments of font size after orientation changes in iOS.
+4. Use a more readable tab size (opinionated).
+*/
+html {
+	font-family:
+		system-ui,
+		'Segoe UI',
+		Roboto,
+		Helvetica,
+		Arial,
+		sans-serif,
+		'Apple Color Emoji',
+		'Segoe UI Emoji';
+	line-height: 1.15;
+	-webkit-text-size-adjust: 100%;
+	tab-size: 4;
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+body {
+	margin: 0;
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct font weight in Chrome and Safari.
+*/
+b,
+strong {
+	font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers.
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+	font-family:
+		ui-monospace,
+		SFMono-Regular,
+		Consolas,
+		'Liberation Mono',
+		Menlo,
+		monospace;
+	font-size: 1em;
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+small {
+	font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+/**
+Correct table border color inheritance in Chrome and Safari.
+*/
+table {
+	border-color: currentcolor;
+}
+
+/*
+Forms
+=====
+*/
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+	font-family: inherit;
+	font-size: 100%;
+	line-height: 1.15;
+	margin: 0;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+	-webkit-appearance: button;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+legend {
+	padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+	vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+	height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+[type='search'] {
+	-webkit-appearance: textfield;
+	outline-offset: -2px;
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+::-webkit-file-upload-button {
+	-webkit-appearance: button;
+	font: inherit;
+}
+
+/*
+Interactive
+===========
+*/
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+	display: list-item;
+}
+
+/************************************************
+ * 1. ROOT VARIABLES & GLOBAL DEFAULTS
+ ************************************************/
+:root {
+  /* Colors */
+  --clr-white: #f7f5f3;
+  --clr-light: #d4d2d0;
+  --clr-slate400: #73716f;
+  --clr-slate600: #3c4954;
+  --clr-slate800: #002942;
+  --clr-dark: #001a2d;
+  --clr-clear: rgba(0, 0, 0, 0);
+  --clr-overlay: rgb(99, 99, 99);
+
+  /* Font Sizes */
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-base: 1rem;    /* ~16px */
+  --size-lg: 1.125rem;  /* ~18px */
+  --size-xl: 1.25rem;   /* ~20px */
+  --size-2xl: 1.5rem;   /* ~24px */
+  --size-3xl: 1.875rem; /* ~30px */
+  --size-4xl: 2.25rem;  /* ~36px */
+  --size-5xl: 3rem;     /* ~48px */
+  --size-6xl: 3.75rem;  /* ~60px */
+  --size-7xl: 4.5rem;   /* ~72px */
+  --size-8xl: 6rem;     /* ~96px */
+  --size-9xl: 8rem;     /* ~128px */
+  --size-10xl: 10rem;   /* ~160px */
+
+  /* Transition Speed */
+  --transition-speed: 0.3s;
+}
+
+/* Global Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+/************************************************
+ * 3. MEDIA ELEMENTS
+ ************************************************/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/************************************************
+ * 4. BUTTONS & INTERACTIVE ELEMENTS
+ ************************************************/
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  background: transparent;
+}
+
+/************************************************
+ * 5. HEADINGS & TEXT
+ ************************************************/
+h1 { font-size: var(--size-4xl); font-weight: 300;}
+h2 { font-size: var(--size-2xl); font-weight: 300;}
+h3 { font-size: var(--size-xl); font-weight: 300;}
+h4 { font-size: var(--size-base); font-weight: 300;}
+h5 { font-size: var(--size-xs); font-weight: 300;}
+h6 { font-size: var(--size-xxs); font-weight: 300;}
 
 p {
-   margin-top: 0;
-   margin-bottom: 0;
-   line-height: 1.2;
-   font-weight: 100;
- }
-
- /************************************************
-  * 7. LINKS
-  ************************************************/
- a {
-   text-decoration: none;
-   color: var(--clr-white);
- }
- 
- /************************************************
-  * 8. LISTS
-  ************************************************/
- ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
- }
- 
- /************************************************
-  * 9. SCROLLBAR (Optional)
-  ************************************************/
- ::-webkit-scrollbar {
-   width: 2px;
- }
- ::-webkit-scrollbar-track {
-   background: rgba(0, 0, 0, 0.8);
- }
- ::-webkit-scrollbar-thumb {
-   background: var(--clr-white);
- }
- ::-webkit-scrollbar-thumb:hover {
-   background: var(--clr-white);
- }
-
-
-
- header {
-   font-size: var(--size-lg);
-   color: var(--clr-white);
-   
- }
-
- .header__menu:has(li:hover) li:not(:hover) {
-   opacity: 0.3;
-   transition: opacity 0.3s;
- }
- 
- .inline {
-   display: flex;
-   justify-content: space-between;
-   align-items: center; 
-   padding: 1rem;
-   padding-top: 0.5rem;
- }
- .logo {
-   font-size: var(--size-2xl);
-   cursor: pointer;
- }
- .collapse {
-   list-style: none;
- }
- 
- .hamburger {
-    background: none;
-    position: relative;
-    border: none;
-    cursor: pointer;
-    /* Position or styling as needed */
-  }
-  .hamburger.fixed-position {
-    position: inline-block;
-  }
-  
-  /* Default: Show hamburger, hide X */
-  .icon-hamburger {
-    display: inline-block;
-
-  }
-  .icon-close {
-    display: none;
-  }
-  
-  /* When .open is toggled, hide hamburger, show X */
-  .hamburger.open .icon-hamburger {
-    display: none;
-
-  }
-  .hamburger.open .icon-close {
-    display: inline-block;
-  }
-  
- 
- /************************************************
-  * 12. MAIN
-
- 
- /* .frontpage etc. if relevant to your layout */
- .frontpage {
-   padding: 1rem;
-   display: flex;
-   flex-direction: column;
-   align-items: center; /* centers horizontally */
-
- }
- 
- /************************************************
-  * 13. PORTFOLIO & CAROUSEL
-  ************************************************/
- .portfolio {
-   padding: 0;
- }
- 
- .carousel {
-   display: flex;
-   flex-wrap: wrap;
-   margin-top: 0;
-   padding-top: 2rem;
-   background-color: var(--clr-white);
- }
- 
- /* 
-   By default (mobile-first), each LI is 100%. 
-   Use media queries to alter widths for desktop.
- */
- .carousel li {
-   width: 100%;
-   margin: 0;
-   padding: 0;
- }
- 
- /* Example box classes */
- .box1,
- .box2,
- .box3 {
-   padding: 0em ;
-   background-color: var(--clr-white);
-   text-align: left;
-   transition: opacity 0.3s;
- }
-
- .textforbutton1,
- .textforbutton2,
- .textforbutton3 {
-  padding-left: 2rem;
-  margin-bottom: 2rem;
-  font-weight: 100;
-  font-weight:normal;
-}
- 
- .box1video,
- .box2video,
- .box3video {
-   display: block;
-   width: 100%;
-   height: auto;
- }
- 
- /* Hover effect with arrow shift */
- .box1:hover,
- .box2:hover,
- .box3:hover {
-   opacity: 0.8;
- }
- .box1:hover .tinyarrow,
- .box2:hover .tinyarrow,
- .box3:hover .tinyarrow {
-   transform: translateX(0.4em) translateY(0em);
-   transition: transform 0.3s;
- }
- 
-.tinyarrow {
-  transform: translateX(.2em) translateY(0em);
+  font-size: var(--size-base);
+  font-weight: 300;
 }
 
-.inline2 {
-  display: flex;
-  padding-left: .15em  ;
+/************************************************
+ * 6. LINKS & LISTS
+ ************************************************/
+a {
+  text-decoration: none;
 }
 
- /************************************************
-  * 14. ABOUT / CONTACT
-  ************************************************/
- .about-section {
-   font-weight: 200;
-   line-height: 1.5;
-   padding-top: 4rem;
-   padding-bottom: 4rem;
- }
- 
- .contact-section {
-   padding: 4rem;
-   line-height: 1.5;
-   text-align: center;
- }
- .email {
-   font-size: var(--size-2xl);
- }
- 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/************************************************
+ * 7. SCROLLBAR
+ ************************************************/
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-white);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-white);
+}
+
+/************************************************
+ * 8. GLOBAL LAYOUT & HEADER
+ ************************************************/
+/* Background Video: fills and sits behind content */
+.back-video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
 header {
+  font-size: var(--size-lg);
+  color: var(--clr-white);
   z-index: 90;
 }
-main {
-  z-index: 80;
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--size-base);
+  padding-top: calc(var(--size-base) / 2);
+  gap: var(--size-base);
 }
 
- /************************************************
-  * 15. FOOTER
-  ************************************************/
- footer {
-   padding: 0;
- }
- 
- 
-/* 3. The Fixed Overlay */
+.logo {
+  font-size: var(--size-2xl);
+  cursor: pointer;
+}
+
+.collapse {
+  list-style: none;
+}
+
+/************************************************
+ * 9. SECTIONS: MAIN, PORTFOLIO, ABOUT, CONTACT & FOOTER
+ ************************************************/
+.frontpage {
+  padding: var(--size-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio {
+  padding: 0;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  padding-top: var(--size-base);
+  background-color: var(--clr-white);
+}
+
+.carousel li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Portfolio Boxes */
+.box1, .box2, .box3 {
+  padding: 0;
+  background-color: var(--clr-white);
+  text-align: left;
+  transition: opacity var(--transition-speed);
+  opacity: 1;
+}
+
+.box1-video, .box2-video, .box3-video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover Effects for Portfolio Boxes */
+.box1:hover,
+.box2:hover,
+.box3:hover {
+  opacity: 0.8;
+}
+
+
+/* About & Contact */
+.about-section {
+  padding: 1rem;
+}
+
+.about-section span {
+  font-weight: 200;
+  line-height: 1.5em;
+}
+
+/* Container that hides the overflow */
+.logo-scroller {
+  overflow: hidden;
+  width: 100%;
+  background: var(--clr-clear); /* Optional: background color */
+}
+
+/* Flex container for the logos with automatic horizontal scroll */
+.logo-track {
+  display: flex;
+  width: calc(200%); /* Twice the width since we're duplicating logos */
+  animation: scroll 20s linear infinite;
+}
+
+/* Styling for each logo */
+.logo {
+  flex: 0 0 auto;
+  margin-right: 30px; /* Adjust spacing between logos */
+}
+
+/* Optional: adjust the size of the images */
+.logo img {
+  max-height: 60px; /* Change as needed */
+  display: block;
+}
+
+/* Keyframes to animate the scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+.contact-section {
+  padding: 2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.email {
+  font-size: var(--size-2xl);
+}
+
+/* Footer */
+footer {
+  padding: 0;
+  text-align: center;
+  padding: 1rem;
+}
+
+/************************************************
+ * 10. NAVIGATION ICONS (Hamburger)
+ ************************************************/
+#nav-icon1 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 20px auto;
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+  cursor: pointer;
+  z-index: 999;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: var(--clr-white);
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+}
+
+#nav-icon1 span:nth-child(1) { top: 0; }
+#nav-icon1 span:nth-child(2) { top: 8px; opacity: 0; }
+#nav-icon1 span:nth-child(3) { top: 16px; }
+
+#nav-icon1.open span:nth-child(1) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  top: 9px;
+  transform: rotate(45deg);
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-45deg);
+}
+
+#nav-icon1.open span:nth-child(1),
+#nav-icon1.open span:nth-child(2),
+#nav-icon1.open span:nth-child(3) {
+  background: var(--clr-dark);
+}
+
+/************************************************
+ * 11. MENU OVERLAY
+ ************************************************/
 .menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0,0,0,0.8);
-  transform: translateX(100%); /* Push off-screen initially (to the right) */
-  transition: transform 1s cubic-bezier(0, 1, 0, 1);
+  background: var(--clr-overlay);
+  color: var(--clr-dark);
+  transition: var(--transition-speed);
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  z-index: 90;
+  pointer-events: none;
 }
 
-/* 4. Show Overlay When .open Class is Present */
 .menu-overlay.open {
-  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
 }
 
-/* 5. Overlay Menu Items */
 .menu-overlay ul {
   list-style: none;
   text-align: center;
 }
+
 .menu-overlay li {
-  margin: 1rem 0;
-}
- /* Example: a menu fade effect */
- .menu-overlay:has(li:hover) li:not(:hover) {
-  opacity: 0.3;
-  transition: opacity 0.3s;
+  font-size: var(--size-4xl);
+  font-weight: bolder;
 }
 
+/* Fade effect for overlay menu items */
+.menu-overlay:has(li:hover) li:not(:hover) {
+  opacity: 0.3;
+  transition: var(--transition-speed);
+}
 
 .menu-overlay a {
-  color: #fff;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: var(--size-2xl);
 }
 
- .ftext {
-   text-align: center;
-   padding: 4rem;
-   font-size: 0.5rem;
- }
- 
- /************************************************
-  * 16. ANIMATED TEXT (Invisible Words)
-  ************************************************/
- .anim span {
-   opacity: 0;
-   transform: translateY(0.5em);
-   display: inline-block;
- }
- .anim span.visible {
-   opacity: 1;
-   transform: translateY(0);
-   transition: transform 0.3s cubic-bezier(0, 1, 0, 1), 
-               opacity 1s cubic-bezier(0, 1, 0, 1);
- }
+/************************************************
+ * 12. ANIMATED TEXT (Invisible Words)
+ ************************************************/
+.anim span {
+  opacity: 0;
+  transform: translateY(0.5em);
+  display: inline-block;
+}
 
- span {
+.anim span.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--transition-speed);
+}
+
+span {
   font-weight: inherit;
- }
- 
- /************************************************
-  * 17. .landing-arrowdown
-  ************************************************/
-/* Landing Arrow Button */
-.landing-arrowdown {
-  background-color: var(--clr-clear);
+}
+
+/************************************************
+ * 13. LANDING ARROW BUTTON (.b-landing)
+ ************************************************/
+.b-landing {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+  padding: 0.5em;
+  border-radius: 0.4em;
   scroll-margin-top: 2rem;
-  transition: opacity 1s cubic-bezier(0, 1, 0, 1);
-  scale: 2;
   margin: 1rem;
+  opacity: 1;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.landing-arrowdown:hover {
-  opacity: 0.3;
+/************************************************
+ * 14. RESPONSIVE & MEDIA QUERIES
+ ************************************************/
+/* Aspect Ratio Based Queries */
+@media (max-aspect-ratio: 4/3) {
 }
 
-/* When the landing arrow button is disabled, 
-   it remains visible but with reduced opacity and disabled pointer events */
-.landing-arrowdown:disabled {
+@media (min-aspect-ratio: 4/3) {
+  .carousel li:nth-child(1),
+  .carousel li:nth-child(2) {
+    width: 50%;
+  }
+  .carousel li:nth-child(3) {
+    width: 100vw;
+  }
+}
+
+/* Additional Breakpoint for min-width: 768px */
+@media (min-width: 768px) {
+  .carousel li:nth-child(1),
+  .carousel li:nth-child(2) {
+    width: 50%;
+  }
+  .carousel li:nth-child(3) {
+    width: 100%;
+  }
+}
+
+/************************************************
+ * 15. UTILITY CLASSES
+ ************************************************/
+.no-scroll-y {
+  overflow-y: hidden;
+}
+
+.empty {
+  height: 60vh;
   pointer-events: none;
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
+/* Spacer Utility Classes */
+/* Use these to add consistent margin or padding spacing throughout your layout */
 
- 
- /************************************************
-  * 18. MEDIA QUERIES (EXAMPLE)
-  ************************************************/
- 
- @media (min-width: 768px) {
-   .carousel li:nth-child(1),
-   .carousel li:nth-child(2) {
-     width: 50%;
-   }
-   .carousel li:nth-child(3) {
-     width: 100%;
-   }
+/* Vertical spacing (margin) */
+.mt-xxs { margin-top: var(--size-xxs); }
+.mt-xs  { margin-top: var(--size-xs); }
+.mt-sm  { margin-top: var(--size-sm); }
+.mt-base { margin-top: var(--size-base); }
+.mt-lg  { margin-top: var(--size-lg); }
+.mt-xl  { margin-top: var(--size-xl); }
+.mt-2xl { margin-top: var(--size-2xl); }
 
- }
+.mb-xxs { margin-bottom: var(--size-xxs); }
+.mb-xs  { margin-bottom: var(--size-xs); }
+.mb-sm  { margin-bottom: var(--size-sm); }
+.mb-base { margin-bottom: var(--size-base); }
+.mb-lg  { margin-bottom: var(--size-lg); }
+.mb-xl  { margin-bottom: var(--size-xl); }
+.mb-2xl { margin-bottom: var(--size-2xl); }
 
- 
+/* Horizontal spacing (margin) */
+.ml-xxs { margin-left: var(--size-xxs); }
+.ml-xs  { margin-left: var(--size-xs); }
+.ml-sm  { margin-left: var(--size-sm); }
+.ml-base { margin-left: var(--size-base); }
+.ml-lg  { margin-left: var(--size-lg); }
+.ml-xl  { margin-left: var(--size-xl); }
+.ml-2xl { margin-left: var(--size-2xl); }
+
+.mr-xxs { margin-right: var(--size-xxs); }
+.mr-xs  { margin-right: var(--size-xs); }
+.mr-sm  { margin-right: var(--size-sm); }
+.mr-base { margin-right: var(--size-base); }
+.mr-lg  { margin-right: var(--size-lg); }
+.mr-xl  { margin-right: var(--size-xl); }
+.mr-2xl { margin-right: var(--size-2xl); }
+
+/* Spacers as empty blocks for vertical spacing */
+.spacer-xxs { height: var(--size-xxs); }
+.spacer-xs  { height: var(--size-xs); }
+.spacer-sm  { height: var(--size-sm); }
+.spacer-base { height: var(--size-base); }
+.spacer-lg  { height: var(--size-lg); }
+.spacer-xl  { height: var(--size-xl); }
+.spacer-2xl { height: var(--size-2xl); }
+
+/* Optionally, you can create similar utility classes for padding */
+.pt-xxs { padding-top: var(--size-xxs); }
+.pt-xs  { padding-top: var(--size-xs); }
+.pt-sm  { padding-top: var(--size-sm); }
+.pt-base { padding-top: var(--size-base); }
+.pt-lg  { padding-top: var(--size-lg); }
+.pt-xl  { padding-top: var(--size-xl); }
+.pt-2xl { padding-top: var(--size-2xl); }
+
+.pb-xxs { padding-bottom: var(--size-xxs); }
+.pb-xs  { padding-bottom: var(--size-xs); }
+.pb-sm  { padding-bottom: var(--size-sm); }
+.pb-base { padding-bottom: var(--size-base); }
+.pb-lg  { padding-bottom: var(--size-lg); }
+.pb-xl  { padding-bottom: var(--size-xl); }
+.pb-2xl { padding-bottom: var(--size-2xl); }
+
+
+/************************************************
+ * 16. COLOR SCHEMES
+ ************************************************/
+.darkmode {
+  background-color: var(--clr-dark);
+  color: var(--clr-white);
+}
+.lightmode {
+  background-color: var(--clr-white);
+  color: var(--clr-dark);
+}
+.whiteclear {
+  background-color: var(--clr-clear);
+  color: var(--clr-white);
+}

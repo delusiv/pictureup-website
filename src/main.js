@@ -112,6 +112,28 @@
     });
   };
 
+// Select all portfolio buttons
+const portfolioButtons = document.querySelectorAll('.portfolio button');
+
+portfolioButtons.forEach((button) => {
+  // Find the video element within the current button
+  const video = button.querySelector('video');
+  
+  // Play the video on mouse enter
+  button.addEventListener('mouseenter', () => {
+    video.play();
+  });
+  
+  // Pause, reset the video, and force the poster on mouse leave
+  button.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+    video.load(); // This reloads the video element, showing the poster
+  });
+});
+
+
+
   /*****************************************************
    * 8. DOCUMENT READY (Vanilla JS)
    *****************************************************/
@@ -120,3 +142,5 @@
     initHamburger();
   });
 })();
+
+

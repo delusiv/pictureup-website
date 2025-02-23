@@ -368,6 +368,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .portfolio {
@@ -417,7 +418,6 @@ header {
 }
 
 .about-section span {
-  font-weight: 200;
   line-height: 1.5em;
 }
 
@@ -601,6 +601,7 @@ footer {
 }
 
 .menu-overlay li {
+  margin: 1rem;
   font-size: var(--size-4xl);
   font-weight: bolder;
 }
@@ -698,6 +699,11 @@ span {
 
 .empty {
   height: 60vh;
+  pointer-events: none;
+}
+
+.empty-s {
+  height: 30vh;
   pointer-events: none;
 }
 

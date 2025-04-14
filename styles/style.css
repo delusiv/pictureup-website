@@ -710,6 +710,12 @@ span {
   background-color: var(--clr-white);
 }
 
+.empty-sw {
+  height: 30vh;
+  pointer-events: none;
+  background-color: var(--clr-white);
+}
+
 .empty-ss {
   height: 10vh;
   pointer-events: none;

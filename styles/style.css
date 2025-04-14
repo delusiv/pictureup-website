@@ -390,15 +390,16 @@ header {
 }
 
 /* Portfolio Boxes */
-.box1, .box2, .box3 {
+.box1, .box2, .box3, .box4 {
   padding: 0;
   background-color: var(--clr-white);
   text-align: left;
   transition: opacity var(--transition-speed);
   opacity: 1;
+  clip-path: inset(1px 1px);
 }
 
-.box1-video, .box2-video, .box3-video {
+.box1-video, .box2-video, .box3-video, .box4-video {
   display: block;
   width: 100%;
   height: auto;
@@ -407,7 +408,9 @@ header {
 /* Hover Effects for Portfolio Boxes */
 .box1:hover,
 .box2:hover,
-.box3:hover {
+.box3:hover,
+.box4:hover,
+{
   opacity: 0.8;
 }
 
@@ -533,13 +536,13 @@ footer {
   z-index: 999;
 }
 
-#nav-icon1 span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background: var(--clr-white);
-  opacity: 1;
+  #nav-icon1 span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: var(--clr-white);
+    opacity: 1;
   left: 0;
   transform: rotate(0deg);
   transition: var(--transition-speed);
@@ -663,11 +666,10 @@ span {
 
 @media (min-aspect-ratio: 4/3) {
   .carousel li:nth-child(1),
-  .carousel li:nth-child(2) {
+  .carousel li:nth-child(2),
+  .carousel li:nth-child(3),
+  .carousel li:nth-child(4) {
     width: 50%;
-  }
-  .carousel li:nth-child(3) {
-    width: 100vw;
   }
   .about-section {
     padding-left: 20em;
@@ -686,7 +688,7 @@ span {
     width: 50%;
   }
   .carousel li:nth-child(3) {
-    width: 100%;
+    width: 50%;
   }
 }
 
@@ -705,6 +707,13 @@ span {
 .empty-s {
   height: 30vh;
   pointer-events: none;
+  background-color: var(--clr-white);
+}
+
+.empty-ss {
+  height: 10vh;
+  pointer-events: none;
+  background-color: var(--clr-dark);
 }
 
 .border {

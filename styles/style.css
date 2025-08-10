@@ -21,7 +21,8 @@ canvas#grain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z
 .nav-link.subtle:hover{opacity:1}
 .hero{min-height:100svh;padding:clamp(5rem,12vh,12rem) clamp(1.4rem,5vw,6rem) 3rem;display:grid;place-items:center;position:relative}
 .hero-inner{width:min(1080px,100%)}
-.title{font-size:clamp(2.4rem,8vw,6.5rem);line-height:.88;font-weight:700;margin:0 0 1.6rem;letter-spacing:-.02em;display:flex;flex-wrap:wrap;align-items:center;gap:.55ch}
+.title{font-size:clamp(2.4rem,8vw,6.5rem);line-height:.88;font-weight:700;margin:0 0 1.6rem;letter-spacing:-.02em;display:flex;flex-direction:column;align-items:flex-start;gap:.15em}
+.title .brand-line{display:block}
 .title .brand em{font-style:normal;background:linear-gradient(90deg,#f5f1e6,#d5d1c4);-webkit-background-clip:text;background-clip:text;color:transparent}
 .title .divider{opacity:.22;font-weight:200}
 .word-cycle{display:inline-flex;position:relative;min-width:5ch}
@@ -43,7 +44,7 @@ canvas#grain{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z
 .micro-copy{margin-top:3.5rem;font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;opacity:.45;font-weight:600}
 .social-footer{position:fixed;inset:auto 0 0 0;width:100%;display:flex;justify-content:center;padding:0 0 1.4rem;pointer-events:none}
 .social-footer ul{list-style:none;display:flex;gap:1.4rem;margin:0;padding:0}
-.social-footer a{--size:2.3rem;pointer-events:auto;display:grid;place-items:center;width:var(--size);height:var(--size);border-radius:50%;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-decoration:none;color:var(--text);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(6px) saturate(180%);position:relative;overflow:hidden}
+.social-footer a{--size:2.3rem;pointer-events:auto;display:grid;place-items:center;width:var(--size);height:var(--size);border-radius:50%;font-size:.65rem;font-weight:600;letter-spacing:.1em;text-decoration:none;color:var(--text);background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(6px) saturate(180%);position:relative;overflow:hidden;transition:transform 1s cubic-bezier(0.19,1,0.22,1)}
 .social-footer a::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.35),rgba(255,255,255,0));opacity:0;transition:opacity .6s}
 .social-footer a:hover::before{opacity:1}
 .social-footer a:hover{transform:translateY(-3px)}

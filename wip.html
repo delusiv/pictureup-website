@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Picture Up — WIP</title>
+    <meta name="description" content="Picture Up — A cinematic creative collective. New site launching soon." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/wip.css" />
+  </head>
+  <body>
+    <canvas id="grain"></canvas>
+    <header class="site-header">
+      <div class="logo-compact" aria-label="Picture Up Logo">PICTURE<span>UP</span></div>
+      <nav class="mini-nav" aria-label="Secondary Navigation">
+        <a href="mailto:contact@picture-up.co" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero" role="main">
+      <div class="hero-inner">
+        <h1 class="title" aria-label="Picture Up. Crafting cinematic stories.">
+          <span class="word-cycle" data-words='["CINEMATIC","IMMERSIVE","TACTILE","AUTHENTIC","ELEVATED"]'>
+            <span class="word">CINEMATIC</span>
+          </span>
+          <span class="divider">/</span>
+          <span class="brand">PICTURE <em>UP</em></span>
+        </h1>
+
+        <p class="tagline">We are building a new experience.<br class="br-hide"/> Coming <span id="launch-window">soon</span>.</p>
+
+        <div class="progress-wrapper" aria-label="Progress indicator">
+          <div class="progress-bar"><span class="fill"></span></div>
+          <div class="progress-meta">
+            <span class="phase-label">Phase: <strong id="phase">Concept</strong></span>
+            <span class="eta" id="eta">ETA Q4 2025</span>
+          </div>
+        </div>
+
+        <div class="cta-group">
+          <a href="mailto:contact@picture-up.co" class="cta primary">Collaborate</a>
+          <button class="cta ghost" id="notifyBtn" aria-describedby="notifyDesc">Notify Me</button>
+          <span id="notifyDesc" class="visually-hidden">Opens email draft to request launch notification</span>
+        </div>
+
+        <div class="micro-copy">© PICTURE UP LLC <span id="year"></span>. All rights reserved.</div>
+      </div>
+    </main>
+
+    <footer class="social-footer">
+      <ul>
+        <li><a href="#" aria-label="Instagram" class="social ig">IG</a></li>
+        <li><a href="#" aria-label="Vimeo" class="social vi">VI</a></li>
+        <li><a href="#" aria-label="LinkedIn" class="social li">IN</a></li>
+      </ul>
+    </footer>
+
+    <script src="src/gsap/gsap.min.js"></script>
+    <script type="module" src="src/wip.js"></script>
+  </body>
+</html>

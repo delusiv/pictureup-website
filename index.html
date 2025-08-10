@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Picture Up — WIP</title>
+    <title>Picture Up — Coming Soon</title>
     <meta name="description" content="Picture Up — A cinematic creative collective. New site launching soon." />
+  <meta name="theme-color" content="#090909" />
+  <meta property="og:title" content="Picture Up — Coming Soon" />
+  <meta property="og:description" content="A cinematic creative collective. New site launching soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://picture-up.co/" />
+  <meta name="twitter:card" content="summary" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -12,6 +18,7 @@
     <script>document.documentElement.classList.remove('no-js');</script>
   </head>
   <body>
+  <a href="#main" class="skip-link">Skip to content</a>
     <canvas id="grain"></canvas>
     <header class="site-header">
       <div class="logo-compact" aria-label="Picture Up Logo">PICTURE<span>UP</span></div>
@@ -20,11 +27,11 @@
       </nav>
     </header>
 
-    <main class="hero" role="main">
+  <main id="main" class="hero" role="main">
       <div class="hero-inner">
-        <h1 class="title" aria-label="Picture Up. Crafting cinematic stories.">
-          <span class="word-cycle" data-words='["NATURALISTIC","SUBTLE","DELIBERATE","PRECISE"]'>
-            <span class="word">NATURALISTIC</span>
+        <h1 class="title" aria-label="Title area">
+          <span class="word-cycle" data-words='["DELIBERATE","PRECISE","NATURALISTIC","SUBTLE"]' aria-live="polite">
+            <span class="word">DELIBERATE</span>
           </span>
           <span class="brand-line">
         </h1>
@@ -34,7 +41,7 @@
         <div class="progress-wrapper" aria-label="Progress indicator">
           <div class="progress-bar"><span class="fill"></span></div>
           <div class="progress-meta">
-            <span class="phase-label">Phase: <strong id="phase">Concept</strong></span>
+            <span class="phase-label">Phase: <strong id="phase" aria-live="polite">Concept</strong></span>
             <span class="eta" id="eta">ETA 2026</span>
           </div>
         </div>

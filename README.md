@@ -1,1 +1,1 @@
-This is the code for picture-up.co
+This is the code for pictureup.co
